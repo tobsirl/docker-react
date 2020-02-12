@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker build -t tobsirl/frontend -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true tobsirl/docker-react npm run test
